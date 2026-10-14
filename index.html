@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning Service</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="loginf.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="more.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+
+            <a href="index.html">
+                <div class="logo">Klean<span>Cart</span> </div>
+            </a>
+
+
+            <nav>
+                <a href="#home">Home</a>
+                <div class="services-menu">
+                    <a href="#">Services</a>
+
+                    <div class="dropdown">
+                        <a href="services.html?category=fullhouse">Full House Deep Cleaning</a>
+                        <a href="services.html?category=customized">Customised Cleaning Package</a>
+                        <a href="services.html?category=commercial">Commercial Space Cleaning</a>
+                    </div>
+                </div>
+                <a href="#">About Us</a>
+                <a href="#why-choose">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <a href="cart.html" class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <button class="nav-login" id="openLoginBtn" type="button">
+                    Login
+                </button>
+            </div>
+            <button class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <h1>
+                    Our Experienced Team Ensures
+                    <br>
+                    Every Space Is Left <span>Spotless, Fresh
+                        <br>& Welcoming.</span>
+                </h1>
+
+                <p class="hero-description">
+                    We provide reliable, affordable and professional
+                    cleaning services for your home and office.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#pick-sec" class="primary-btn"> Book a Service </a>
+                    <a href="#" class="secondary-btn"> Explore Services </a>
+                </div>
+            </div>
+
+            <!-- <div class="hero-image">
+                <img src="Photos/herof.jpg.jpeg" alt="Professional cleaning service">
+            </div> -->
+        </section>
+
+        <!-- Choose category -->
+        <section class="category-sec container">
+            <!-- badge -->
+            <div class="badge">
+                <img src="image.png" alt="Verified Badge" class="badge-icon-img">
+                <span>Your Space, Our Expertise</span>
+            </div>
+
+            <h3 class="subtitle">Choose Your Category</h3>
+            <!-- category items -->
+            <div class="category-grid">
+
+                <!-- Card 1 -->
+                <a href="services.html" class="cat-card-link">
+                    <div class="cat-card">
+                        <div class="cat-media flex-center">
+                            <img src="houseclean.jpg" alt="Full House Deep Cleaning">
+                        </div>
+                        <h4>Full House Deep Cleaning</h4>
+
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="services.html?category=customized" class="cat-card-link">
+                    <div class="cat-card">
+                        <div class="cat-media flex-center">
+                            <img src="cleaningpackage.jpg" alt="Customized Cleaning Package">
+                        </div>
+                        <h4>Customized Cleaning Package</h4>
+                    </div>
+                </a>
+
+
+                <!-- Card 3 -->
+                <a href="services.html?category=commercial" class="cat-card-link">
+                    <div class="cat-card">
+                        <div class="cat-media flex-center">
+                            <img src="commercial cleaning.jpg" alt="Commercial Post Interior Cleaning Services">
+                        </div>
+                        <h4>Commercial Post Interior Cleaning Services</h4>
+                    </div>
+            </div>
+            </a>
+        </section>
+
+        <section class="pick-section" id="pick-sec">
+            <!-- Header with Green Lines -->
+            <div class="pick-title-wrapper">
+                <span class="green-line"></span>
+                <h2>Pick Only What You Need</h2>
+                <span class="green-line"></span>
+            </div>
+            <p class="pick-subtitle">Customize your clean</p>
+
+            <!-- 4 Cards Row (Fixed Grid) -->
+            <div class="pick-cards-container">
+                <!-- Card 1 -->
+                <div class="pick-box">
+                    <div class="pick-price-row">
+                        <span class="starts-text">Starts at</span>
+                        <span class="price-val">₹ 250.00</span>
+                    </div>
+                    <div class="pick-thumb">
+                        <img src="dining table clean.jpg" alt="Dining Table & Chairs Cleaning">
+                    </div>
+                    <h4>Dining Table &amp; Chairs Cleaning</h4>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="pick-box">
+                    <div class="pick-price-row">
+                        <span class="starts-text">Starts at</span>
+                        <span class="price-val">₹ 1099.00</span>
+                    </div>
+                    <div class="pick-thumb">
+                        <img src="Living room Deep Cleaning (Only For Flats).jpg" alt="Living Room Deep Cleaning">
+                    </div>
+                    <h4>Living Room Deep Cleaning</h4>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pick-box">
+                    <div class="pick-price-row">
+                        <span class="starts-text">Starts at</span>
+                        <span class="price-val">₹ 499.00</span>
+                    </div>
+                    <div class="pick-thumb">
+                        <img src="Bathroom Deep Cleaning Service.jpg" alt="Bathroom Deep Cleaning">
+                    </div>
+                    <h4>Bathroom Deep Cleaning Service</h4>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="pick-box">
+                    <div class="pick-price-row">
+                        <span class="starts-text">Starts at</span>
+                        <span class="price-val">₹ 1249.00</span>
+                    </div>
+                    <div class="pick-thumb">
+                        <img src="Kitchen Deep Cleaning Service.jpg" alt="Kitchen Deep Cleaning">
+                    </div>
+                    <h4>Kitchen Deep Cleaning Service</h4>
+                </div>
+
+            </div>
+
+            <!-- Center Pagination Dots -->
+            <div class="pick-pagination">
+                <span class="p-dot active"></span>
+                <span class="p-dot"></span>
+                <span class="p-dot"></span>
+                <span class="p-dot"></span>
+            </div>
+        </section>
+        <!-- Service Selection Popup -->
+
+        <div class="service-card-back" id="serviceModal">
+            <div class="service-modal">
+
+                <button class="card-close" id="closeServiceModal" aria-label="Close popup">
+                    &times;
+                </button>
+
+                <h2 id="modalServiceTitle">Service Name</h2>
+
+                <div class="service-options" id="serviceOptions">
+                    <!-- Options will be added using JavaScript -->
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- SECTION WHY CHOOSE US -->
+        <section class="why-choose-sec container">
+            <div class="why-arch-box">
+                <!-- Main Heading -->
+                <h2 class="why-title">Why <span class="green-txt">choose us?</span></h2>
+
+                <!-- Interactive Showcase Area -->
+                <div class="why-display-wrapper">
+                    <!-- Left Side Floating Items -->
+                    <div class="why-side left-side">
+                        <div class="feature-pill pos-l1">
+                            <div class="icon-sq">
+                                <img src="https://img.icons8.com/color/96/guarantee.png" alt="Trusted">
+                            </div>
+                            <span>Trusted<br>Followers</span>
+                        </div>
+
+                        <div class="feature-pill pos-l2">
+                            <div class="icon-sq">
+                                <img src="https://img.icons8.com/color/96/gift.png" alt="Rewards">
+                            </div>
+                            <span>rewards</span>
+                        </div>
+
+                        <div class="feature-pill pos-l3">
+                            <div class="icon-sq">
+                                <img src="https://img.icons8.com/color/96/happy.png" alt="Happy Clients">
+                            </div>
+                            <span>Happy clients</span>
+                        </div>
+                    </div>
+
+                    <!-- Center Phone Mockup -->
+                    <div class="center-phone-mockup">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="phone-inner-card">
+                                <div class="icon-sq center-ico">
+                                    <img src="https://img.icons8.com/color/96/timer.png" alt="Speed">
+                                </div>
+                                <p class="phone-card-txt">Fast, Flexible ,<br>Hustle-free</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Floating Items -->
+                    <div class="why-side right-side">
+                        <div class="feature-pill pos-r1">
+                            <div class="icon-sq">
+                                <img src="https://img.icons8.com/color/96/alarm.png" alt="Reminders">
+                            </div>
+                            <span>Service<br>Reminders</span>
+                        </div>
+
+                        <div class="feature-pill pos-r2">
+                            <div class="icon-sq">
+                                <img src="https://img.icons8.com/color/96/conference-call.png" alt="Pro Teams">
+                            </div>
+                            <span>Pro-Level<br>Teams</span>
+                        </div>
+
+                        <div class="feature-pill pos-r3">
+                            <div class="icon-sq">
+                                <img src="https://img.icons8.com/color/96/company.png" alt="Homes & Offices">
+                            </div>
+                            <span>From Homes<br>to Offices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lead-banner-sec container">
+            <div class="lead-card" id="why-choose">
+                <!-- Left Video / Media Box -->
+                <div class="lead-video-box">
+                    <!-- Video tag ready: apna video link 'src' me daal dena -->
+                    <video class="lead-video" autoplay loop muted playsinline>
+                        <source src="deep clean video.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+
+                <!-- Right Content & Form -->
+                <div class="lead-content">
+                    <h2 class="lead-heading">
+                        Har Din Ki Safai Ka Sahara<br>
+                        <span class="brand-highlight">KleanKart</span>
+                    </h2>
+
+                    <!-- Phone Number Input Bar -->
+                    <form class="lead-phone-form" onsubmit="event.preventDefault();">
+                        <div class="input-wrap">
+                            <span class="phone-prefix">📞 +91</span>
+                            <input type="tel" placeholder="Enter your number" maxlength="10" required>
+                        </div>
+                        <button type="submit" class="lead-book-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo">
+            <div class="demo-head">
+                <h2>How to get <span>Started</span></h2>
+            </div>
+
+            <div class="demo-imgs">
+                <div class="demo-card">
+                    <div class="demo-img">
+                        <img src="Photos/demo-image1.png" alt="Click">
+                    </div>
+                    <h3>
+                        Click
+                    </h3>
+                    <p>Pick Your Service. Pick Your Time. That's It.</p>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-img">
+                        <img src="Photos/demo-image2.png" alt="Klean">
+                    </div>
+
+                    <h3>Clean</h3>
+                    <p>Our Experts Arrive. Gears On. Gloves Up. Dirt Out.</p>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-img">
+                        <img src="Photos/demo-image3.png" alt="Relax">
+                    </div>
+
+                    <h3>Relax</h3>
+                    <p>Sip Your Coffee. Watch Your Home Shine. Repeat as Needed</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="par-log">
+            <div class="logo">Klean<span>Cart</span></div>
+            <p>Professional cleaning services you can trust.</p>
+
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+        </div>
+
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li ><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#why-choose">Contact</a></li>
+            </ul>
+        </div>
+        <div class="our-services">
+            <h3>Our Services</h3>
+            <ul class="footer-links">
+                <li><a href="#deepcleaning">Deep Cleaning</a></li>
+                <li><a href="#Regular">Regular Cleaning</a></li>
+                <li><a href="#appartment">Appartment Cleaning</a></li>
+                <li><a href="#office">Office Cleaning</a></li>
+            </ul>
+        </div>
+        <div class="contact-us">
+            <h3>Contact US</h3>
+            <p></p>
+            <ul class="footer-links">
+                <li> <i class="fa-solid fa-location-dot"></i> CleanCare services, opp. Police Station,
+                    Bhawarkuan Square, Indore, Madhya Pradesh 452014</li>
+                <li> <i class="fa-solid fa-envelope"></i> cleancare@gmail.com</li>
+
+                <li> <i class="fa-solid fa-phone"></i> +91 7828000000</li>
+            </ul>
+
+        </div>
+    </footer>
+
+    <!-- LOGIN WINDOW WILL BE LOADED HERE -->
+    <div id="loginContainer"></div>
+
+    <script src="script.js
+    "></script>
+    <!-- LOGIN JAVASCRIPT -->
+    <script>
+
+        const openLoginBtn =
+            document.getElementById("openLoginBtn");
+
+        const loginContainer =
+            document.getElementById("loginContainer");
+
+
+        // LOAD LOGIN HTML
+        fetch("loginf.html")
+            .then(response => response.text())
+            .then(data => {
+
+                loginContainer.innerHTML = data;
+
+                setupLogin();
+
+            })
+            .catch(error => {
+
+                console.error(
+                    "Error loading login:",
+                    error
+                );
+
+            });
+
+
+        // LOGIN FUNCTIONS
+        function setupLogin() {
+
+            const loginOverlay =
+                document.getElementById("loginOverlay");
+
+            const loginPopup =
+                document.getElementById("loginPopup");
+
+            const closeLoginBtn =
+                document.getElementById("closeLoginBtn");
+
+
+            // OPEN LOGIN
+            openLoginBtn.addEventListener("click", function () {
+
+                loginOverlay.style.display = "block";
+
+                loginPopup.style.display = "block";
+
+            });
+
+            // CLOSE LOGIN
+            closeLoginBtn.addEventListener("click", function () {
+
+                loginOverlay.style.display = "none";
+
+                loginPopup.style.display = "none";
+
+            });
+
+            // CLICK OUTSIDE TO CLOSE
+            loginOverlay.addEventListener("click", function () {
+
+                loginOverlay.style.display = "none";
+
+                loginPopup.style.display = "none";
+
+            });
+
+        }
+
+    </script>
+
+    <script src="servicescard.js"></script>
+</body>
+
+</html>

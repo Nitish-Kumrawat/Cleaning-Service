@@ -1,0 +1,540 @@
+.hero {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0;
+    padding-left: 150px;
+    gap: 50px;
+
+    scroll-margin-top: 70px;
+    background-image: url("homebg.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+
+.hero h1 {
+    font-size: 35px;
+    font-weight:500;
+    color: #111;
+    margin-bottom: 25px;
+    font-family: Manrope, system-ui, -apple-system, sans-serif;
+    text-align: center;
+}
+
+.hero h1 span {
+    display: inline;
+    color:#002c8a
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+    justify-content: center;
+}
+
+.primary-btn {
+    text-decoration: none;
+    background-color: #002c8a;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    width: 210px;
+    height: 50px;
+    text-align: center;
+}
+
+.secondary-btn {
+    text-decoration: none;
+    color: #002c8a;
+    border: 1px solid #002c8a;
+    padding: 14px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    width: 210px;
+    height: 50px;
+    text-align: center;
+}
+
+.primary-btn:hover {
+    background-color: #234a9e;;
+}
+
+
+
+.hero-image img {
+    width: 100%;
+    height: 600px;
+    object-fit:contain;
+    border-radius: 20px;
+}
+
+/* Category section */
+.category-sec {
+    text-align: center;
+    margin: 110px auto 120px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+/* Yellow Badge */
+.badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: linear-gradient(135deg, #ffea9f, #ffd54f);
+    color: #13e13c;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 7px 22px 7px 10px;
+    border-radius: 40px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(243, 247, 7, 0.938);
+    transition: transform 0.25s var(--smooth-bezier);
+    cursor: default;
+}
+/* .badge:hover{
+    transform: translateY(-3px);
+} */
+.badge-icon-img{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    background-color: #1b633e;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.subtitle{
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Grid Layout (3 Equal Columns) */
+.category-grid{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 30px;
+}
+.cat-card{
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Rounded Box for Icon */
+.cat-media{
+    width: 100%;
+    height: 180px;
+    background: #000000; /* Soft warm background like original site */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.cat-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* Pura box fill hoga */
+    object-position: center;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Category Hover Effects */
+.cat-card:hover .cat-media {
+    transform: translateY(-8px);
+    background: var(--glass-card-hover);
+    border-color: var(--glass-border-hover);
+    box-shadow: var(--shadow-dark), var(--shadow-glow);
+}
+.cat-card:hover .cat-media img {
+    transform: scale(1.12);
+}
+.cat-card h4 {
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    line-height: 1.4;
+    transition: color 0.25s ease;
+}
+
+.cat-card:hover h4 {
+    color: var(--primary-green);
+}
+@media (max-width: 850px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+
+/* Pick What You Need */
+.pick-section {
+    max-width: 1200px;
+    /* margin: 100px auto 80px auto; */
+    margin: 150px auto 110px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Title with centered green lines */
+.pick-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.pick-title-wrapper h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+}
+
+.green-line {
+    display: inline-block;
+    width: 60px;
+    height: 3px;
+    background-color: #002c8a;
+    border-radius: 4px;
+}
+
+.pick-subtitle {
+    font-size: 18px;
+    color: #616e80;
+    margin-top: 6px;
+    margin-bottom: 35px;
+}
+
+/* 4 Cards Grid - No Stretching */
+.pick-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 barabar columns */
+    gap: 24px;
+    align-items: start;
+}
+
+.pick-box {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.pick-box:hover {
+    transform: translateY(-6px);
+}
+
+/* Top Price Row */
+.pick-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 4px 10px 4px;
+}
+
+.starts-text {
+    font-size: 13px;
+    color: #566272;
+    font-weight: 700;
+}
+
+.price-val {
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* Warm Off-White Rounded Thumb Box (Reference Photo Jaisa) */
+.pick-thumb {
+    width: 100%;
+    height: 170px;
+    background: #fdfaf3; /* Original warm background */
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pick-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.pick-box:hover .pick-thumb img {
+    transform: scale(1.06);
+}
+
+/* Title text */
+.pick-box h4 {
+    margin-top: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+}
+
+.pick-box:hover h4 {
+    color: black;
+}
+
+/* Pagination Dots */
+.pick-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 35px;
+}
+
+.p-dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.p-dot.active {
+    background-color: #22c55e;
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .pick-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .pick-cards-container {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .pick-title-wrapper h2 {
+        font-size: 22px;
+    }
+    .green-line {
+        width: 35px;
+    }
+}
+/* Service Selection Popup */
+.service-card-back {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.40);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.service-card-back.show {
+    display: flex;
+}
+
+.service-modal {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 26px 25px 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.service-modal h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 35px 22px;
+}
+
+.card-close {
+    position: fixed;
+    /* JavaScript will position the close button
+       relative to the popup instead */
+    background: #ffffff;
+    border: none;
+    color: #111827;
+    font-size: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.service-modal .card-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: transparent;
+    width: 35px;
+    height: 35px;
+    font-size: 28px;
+}
+
+.service-options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.service-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #dbe4ef;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.service-option-info h3 {
+    margin: 0 0 7px;
+    font-size: 18px;
+    color: #111827;
+}
+
+.service-option-info p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #374151;
+}
+
+.service-option-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.service-option-actions button {
+    border: none;
+    background: #002c8a;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.service-option-actions button:hover {
+    background: #234a9e;
+}
+
+@media (max-width: 550px) {
+    .service-modal {
+        padding: 24px 14px 16px;
+    }
+
+    .service-modal h2 {
+        font-size: 21px;
+        margin: 0 30px 20px;
+    }
+
+    .service-option {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .service-option-info h3 {
+        font-size: 15px;
+    }
+
+    .service-option-info p {
+        font-size: 15px;
+    }
+
+    .service-option-actions {
+        gap: 6px;
+    }
+
+    .service-option-actions button {
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+}
+
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls button, .done-service {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-controls button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.quantity-controls span {
+    min-width: 20px;
+    text-align: center;
+}
+
+.done-service {
+    background: #19763b;
+    color: white;
+}
