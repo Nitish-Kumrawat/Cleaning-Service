@@ -14,6 +14,7 @@
 
 <body>
     <header>
+        <input type="checkbox" id="menu-toggle">
         <div class="navbar">
 
             <a href="index.html">
@@ -44,9 +45,34 @@
                     Login
                 </button>
             </div>
-            <button class="menu-btn">
+            <label for="menu-toggle" class="menu-btn" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars"></i>
-            </button>
+            </label>
+
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+
+            <div class="mobile-services">
+                <a href="services.html">Services</a>
+
+                <div class="mobile-dropdown">
+                    <a href="services.html?category=fullhouse">Full House Deep Cleaning</a>
+                    <a href="services.html?category=customized">Customized Cleaning Package</a>
+                    <a href="services.html?category=commercial">
+Commercial Post Interior Cleaning Services</a>
+                </div>
+            </div>
+
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+
+            <a href="#" class="mobile-login" onclick="document.getElementById('openLoginBtn').click(); return false;">
+                Login
+            </a>
         </div>
     </header>
 
@@ -72,13 +98,9 @@
                     <a href="#" class="secondary-btn"> Explore Services </a>
                 </div>
             </div>
-
-            <!-- <div class="hero-image">
-                <img src="Photos/herof.jpg.jpeg" alt="Professional cleaning service">
-            </div> -->
         </section>
 
-        <!-- Choose category -->
+
         <section class="category-sec container">
             <!-- badge -->
             <div class="badge">
@@ -210,7 +232,7 @@
 
             </div>
         </div>
-        
+
         <!-- SECTION WHY CHOOSE US -->
         <section class="why-choose-sec container">
             <div class="why-arch-box">
@@ -363,7 +385,7 @@
         <div class="quick-links">
             <h3>Quick Links</h3>
             <ul class="footer-links">
-                <li ><a href="#home">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#why-choose">Contact</a></li>
