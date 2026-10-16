@@ -188,23 +188,18 @@ nav a {
         font-size: 1.6rem;
     }
 
-    /* Hide desktop links */
-    .navbar nav,
-    .navbar .nav-right {
+    .navbar nav, .navbar .nav-right {
         display: none;
     }
 
-    /* Show hamburger */
     .menu-btn {
-    display: block;
-    color: #222;
-    font-size: 24px;
-    cursor: pointer;
-    flex-shrink: 0;
+        display: block;
+        color: #222;
+        font-size: 24px;
+        cursor: pointer;
+        flex-shrink: 0;
     }
 
-
-    /* Mobile Menu Panel */
     .mobile-menu {
         position: fixed;
         top: 70px;

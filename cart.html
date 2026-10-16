@@ -14,13 +14,16 @@
 
 <body>
     <header>
+        <input type="checkbox" id="menu-toggle">
         <div class="navbar">
+
             <a href="index.html">
                 <div class="logo">Klean<span>Cart</span> </div>
             </a>
 
+
             <nav>
-                <a href="index.html">Home</a>
+                <a href="#home">Home</a>
                 <div class="services-menu">
                     <a href="#">Services</a>
 
@@ -30,7 +33,7 @@
                         <a href="services.html?category=commercial">Commercial Space Cleaning</a>
                     </div>
                 </div>
-                <a href="">About Us</a>
+                <a href="#">About Us</a>
                 <a href="#why-choose">Contact</a>
             </nav>
 
@@ -42,9 +45,34 @@
                     Login
                 </button>
             </div>
-            <button class="menu-btn">
+            <label for="menu-toggle" class="menu-btn" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars"></i>
-            </button>
+            </label>
+
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+
+            <div class="mobile-services">
+                <a href="services.html">Services</a>
+
+                <div class="mobile-dropdown">
+                    <a href="services.html?category=fullhouse">Full House Deep Cleaning</a>
+                    <a href="services.html?category=customized">Customized Cleaning Package</a>
+                    <a href="services.html?category=commercial">
+Commercial Post Interior Cleaning Services</a>
+                </div>
+            </div>
+
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+
+            <a href="#" class="mobile-login" onclick="document.getElementById('openLoginBtn').click(); return false;">
+                Login
+            </a>
         </div>
     </header>
 
@@ -78,16 +106,16 @@
             <div class="logo">Klean<span>Cart</span></div>
             <p>Professional cleaning services you can trust.</p>
 
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-x-twitter"></i>
+             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
 
         <div class="quick-links">
             <h3>Quick Links</h3>
             <ul class="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -95,10 +123,9 @@
         <div class="our-services">
             <h3>Our Services</h3>
             <ul class="footer-links">
-                <li><a href="#deepcleaning">Deep Cleaning</a></li>
-                <li><a href="#Regular">Regular Cleaning</a></li>
-                <li><a href="#appartment">Appartment Cleaning</a></li>
-                <li><a href="#office">Office Cleaning</a></li>
+                <li><a href="services.html?category=fullhouse">Full House Deep Cleaning</a></li>
+                <li><a href="services.html?category=customized">Customised Cleaning Package</a></li>
+                <li><a href="services.html?category=commercial">Commercial Space Cleaning</a></li>
             </ul>
         </div>
         <div class="contact-us">
