@@ -33,18 +33,10 @@
                         <a href="services.html?category=commercial">Commercial Space Cleaning</a>
                     </div>
                 </div>
-                <a href="#">About Us</a>
+                <a href="#about-us">About Us</a>
                 <a href="#why-choose">Contact</a>
             </nav>
 
-            <div class="nav-right">
-                <a href="cart.html" class="cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-                <button class="nav-login" id="openLoginBtn" type="button">
-                    Login
-                </button>
-            </div>
             <label for="menu-toggle" class="menu-btn" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars"></i>
             </label>
@@ -62,17 +54,11 @@
                     <a href="services.html?category=fullhouse">Full House Deep Cleaning</a>
                     <a href="services.html?category=customized">Customized Cleaning Package</a>
                     <a href="services.html?category=commercial">
-Commercial Post Interior Cleaning Services</a>
+                        Commercial Post Interior Cleaning Services</a>
                 </div>
             </div>
 
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="cart.html">Cart</a>
-
-            <a href="#" class="mobile-login" onclick="document.getElementById('openLoginBtn').click(); return false;">
-                Login
-            </a>
+            <a href="booking.html">Contact</a>
         </div>
     </header>
 
@@ -129,8 +115,7 @@ Commercial Post Interior Cleaning Services</a>
             <ul class="footer-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="booking.html">Contact</a></li>
             </ul>
         </div>
         <div class="our-services">
@@ -231,7 +216,7 @@ Commercial Post Interior Cleaning Services</a>
                     },
                     {
                         name: "Bungalow/Villa",
-                        price: "Customised Price",
+                        price: "₹ 4999",
                         rating: "3.4",
                         img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&auto=format&fit=crop&q=80",
                         desc: "Premium full house deep cleaning for large 5 BHK bungalows or villas, covering multiple bedrooms and outdoor decks...",
@@ -302,11 +287,13 @@ Commercial Post Interior Cleaning Services</a>
                             <!-- Dual Action Buttons Like Reference -->
                             <div class="action-btn-row">
                                 <button
-                                    class="btn-add-cart"
-                                    data-name="${item.name}"
-                                    data-price="${item.price}"
-                                    onclick="showQuantityControl(this)">
-                                    Add
+                                    type="button"
+                                    class="btn-book-now"
+                                    data-service="${data.title}"
+                                    data-option="${item.name}"
+                                    data-price="${item.price.replace(/[^\d.]/g, '') || 'Customised Price'}"
+                                    onclick="bookService(this)">
+                                    Book Now
                                 </button>
                             </div>
                         </div>
@@ -316,74 +303,19 @@ Commercial Post Interior Cleaning Services</a>
             });
         }
 
+        function bookService(button) {
+                const serviceName = button.dataset.service;
+                const optionName = button.dataset.option;
+                const price = button.dataset.price;
 
-        function showQuantityControl(button) {
-            const name = button.dataset.name;
-            const price = parseFloat(button.dataset.price.replace(/[^\d.]/g, ''));
+                const bookingURL = new URL("booking.html", window.location.href);
 
-            if (isNaN(price)) {
-                alert("This service requires a customised price.");
-                return;
+                bookingURL.searchParams.set("service", serviceName);
+                bookingURL.searchParams.set("option", optionName);
+                bookingURL.searchParams.set("price", price);
+
+                window.location.href = bookingURL.toString();
             }
-
-            const row = button.closest(".action-btn-row");
-
-            row.innerHTML = `
-        <div class="quantity-selection">
-            <div class="quantity-control">
-                <button type="button" class="qty-minus">−</button>
-                <span class="qty-value">1</span>
-                <button type="button" class="qty-plus">+</button>
-            </div>
-            <button type="button" class="confirm-add-btn">
-                Add to Cart
-            </button>
-        </div>
-    `;
-
-            const qtyValue = row.querySelector(".qty-value");
-
-            row.querySelector(".qty-minus").addEventListener("click", () => {
-                let qty = Number(qtyValue.textContent);
-                if (qty > 1) qtyValue.textContent = qty - 1;
-            });
-
-            row.querySelector(".qty-plus").addEventListener("click", () => {
-                let qty = Number(qtyValue.textContent);
-                if (qty < 5) qtyValue.textContent = qty + 1;
-            });
-
-            row.querySelector(".confirm-add-btn").addEventListener("click", () => {
-                const quantity = Number(qtyValue.textContent);
-                let cart = JSON.parse(
-                    localStorage.getItem("cleanCareCart") || "[]"
-                );
-
-                const existing = cart.find(item => item.name === name);
-
-                if (existing) {
-                    existing.quantity = Math.min(5, existing.quantity + quantity);
-                } else {
-                    cart.push({
-                        id: name,
-                        name: name,
-                        price: price,
-                        quantity: quantity
-                    });
-                }
-
-                localStorage.setItem("cleanCareCart", JSON.stringify(cart));
-
-                row.innerHTML = `
-            <button class="btn-add-cart"
-                    data-name="${name}"
-                    data-price="${price}"
-                    onclick="showQuantityControl(this)">
-                Added ✓ — Add More
-            </button>
-        `;
-            });
-        }
 
         // On Click Switch
         function switchCategory(catKey) {

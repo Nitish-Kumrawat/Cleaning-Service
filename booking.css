@@ -1,0 +1,144 @@
+/* Booking Section */
+.booking-section {
+    margin-top: 70px;
+    padding: 60px 20px 80px;
+    background: #f8f9fc;
+    min-height: 80vh;
+}
+
+/* Heading */
+.booking-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.booking-heading h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.booking-heading h1 span {
+    color: #002c8a;
+}
+
+.booking-heading p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Form Container */
+.booking-container {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.booking-container h2 {
+    font-size: 21px;
+    color: #002c8a;
+    margin-bottom: 22px;
+}
+
+/* Form Fields */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d5dbe5;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: sans-serif;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #002c8a;
+}
+
+.form-group input[readonly] {
+    background: #f3f5fa;
+    color: #444;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 25px 0;
+}
+
+/* Date and Time */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Submit Button */
+.booking-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #002c8a;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.booking-btn:hover {
+    background: #234a9e;
+}
+
+.booking-btn i {
+    margin-left: 8px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .booking-section {
+        padding: 40px 15px 60px;
+    }
+
+    .booking-heading h1 {
+        font-size: 26px;
+    }
+
+    .booking-heading p {
+        font-size: 14px;
+    }
+
+    .booking-container {
+        padding: 25px 18px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

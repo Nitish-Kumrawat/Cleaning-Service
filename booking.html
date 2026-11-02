@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Service | KleanCart</title>
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="more.css">
+    <link rel="stylesheet" href="booking.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <input type="checkbox" id="menu-toggle">
+
+        <div class="navbar">
+            <a href="index.html">
+                <div class="logo">Klean<span>Cart</span></div>
+            </a>
+
+            <nav>
+                <a href="index.html#home">Home</a>
+
+                <div class="services-menu">
+                    <a href="services.html">Services</a>
+
+                    <div class="dropdown">
+                        <a href="services.html?category=fullhouse">Full House Deep Cleaning</a>
+                        <a href="services.html?category=customized">Customised Cleaning Package</a>
+                        <a href="services.html?category=commercial">Commercial Space Cleaning</a>
+                    </div>
+                </div>
+
+                <a href="#about-us">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <label for="menu-toggle" class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+
+            <div class="mobile-services">
+                <a href="services.html">Services</a>
+
+                <div class="mobile-dropdown">
+                    <a href="services.html?category=fullhouse">Full House Deep Cleaning</a>
+                    <a href="services.html?category=customized">Customized Cleaning Package</a>
+                    <a href="services.html?category=commercial">Commercial Post Interior Cleaning Services</a>
+                </div>
+            </div>
+
+            <a href="booking.html">Contact</a>
+
+        </div>
+    </header>
+
+
+    <!-- Booking Section -->
+    <main class="booking-section">
+
+        <div class="booking-heading">
+            <h1>Book Your <span>Service</span></h1>
+            <p>Fill in your details and let us take care of your cleaning needs.</p>
+        </div>
+
+        <div class="booking-container">
+
+            <form id="bookingForm">
+
+                <h2>Booking Details</h2>
+
+                <div class="form-group">
+                    <label for="serviceName">Selected Service</label>
+                    <input type="text" id="serviceName" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceOption">Selected Option</label>
+                    <input type="text" id="serviceOption" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicePrice">Price</label>
+                    <input type="text" id="servicePrice" readonly>
+                </div>
+
+                <div class="form-divider"></div>
+
+                <h2>Your Information</h2>
+
+                <div class="form-group">
+                    <label for="customerName">Full Name</label>
+                    <input type="text" id="customerName"
+                           placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile"
+                           placeholder="Enter 10 digit mobile number"
+                           pattern="[0-9]{10}" maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Complete Address</label>
+                    <textarea id="address"
+                              placeholder="Enter your complete address"
+                              rows="4" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookingDate">Booking Date</label>
+                        <input type="date" id="bookingDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingTime">Preferred Time</label>
+                        <input type="time" id="bookingTime" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="booking-btn">
+                    Book Now <i class="fa-brands fa-whatsapp"></i>
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <div class="par-log">
+            <div class="logo">Klean<span>Cart</span></div>
+            <p>Professional cleaning services you can trust.</p>
+
+            <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="our-services">
+            <h3>Our Services</h3>
+            <ul class="footer-links">
+                <li><a href="services.html?category=fullhouse">Full House Deep Cleaning</a></li>
+                <li><a href="services.html?category=customized">Customised Cleaning Package</a></li>
+                <li><a href="services.html?category=commercial">Commercial Space Cleaning</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    CleanCare services, opp. Police Station,
+                    Bhawarkuan Square, Indore, Madhya Pradesh 452014
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    cleancare@gmail.com
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 7828000000
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="booking.js"></script>
+
+</body>
+</html>
